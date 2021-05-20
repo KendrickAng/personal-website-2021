@@ -50,6 +50,10 @@ img {
     max-width: 100%;
 }
 
+strong {
+    font-weight: var(--fw-bold);
+}
+
 /* Typography */
 h1,
 h2,
@@ -66,4 +70,29 @@ h2 {
 }
 h3 {
     font-size: var(--fs-h3);
+}
+
+.section__title {
+    /* em is good for margin/padding since it's relative to font size */
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+/* kind of cheating; not good practice */
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
 }
