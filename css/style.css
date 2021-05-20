@@ -45,6 +45,10 @@ body {
     line-height: 1.6;
 }
 
+section {
+    padding: 5em 2em;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -95,4 +99,27 @@ h3 {
 .section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* Intro section */
+
+.intro {
+    position: relative /* ?? */
+}
+
+/* media queries should generally come in around 300->, 600->, 900-> */
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__mg {
+        grid-area: img;
+        /* TODO */
+    }
 }
